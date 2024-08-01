@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda Online</h1>
+    </header>
+
+    <div class="upload-form">
+        <input type="file" id="imageInput" accept="image/*">
+        <input type="number" id="priceInput" placeholder="Precio" min="0">
+        <button onclick="addProduct()">Añadir Producto</button>
+    </div>
+
+    <div class="buttons">
+        <button onclick="showAllProducts()">Todos</button>
+        <button onclick="filterProducts('cheap')">Baratos</button>
+        <button onclick="filterProducts('medium')">Intermedios</button>
+        <button onclick="filterProducts('expensive')">Caros</button>
+    </div>
+
+    <div class="search-form">
+        <input type="text" id="searchInput" placeholder="Buscar productos..." oninput="searchProducts()">
+    </div>
+
+    <div class="gallery" id="gallery">
+        <!-- Productos iniciales -->
+        <div class="product" data-price="30">
+            <img src="product1.jpg" alt="Producto 1">
+            <p class="product-price">$30</p>
+        </div>
+        <div class="product" data-price="150">
+            <img src="product2.jpg" alt="Producto 2">
+            <p class="product-price">$150</p>
+        </div>
+        <div class="product" data-price="300">
+            <img src="product3.jpg" alt="Producto 3">
+            <p class="product-price">$300</p>
+        </div>
+        <!-- Más productos aquí -->
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Tienda Online. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="bktree.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
